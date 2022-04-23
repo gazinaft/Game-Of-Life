@@ -1,0 +1,11 @@
+# Import cache
+.import/
+
+.mono
+.idea
+addons
+
+# Binaries
+bin/
+build/
+lib/
