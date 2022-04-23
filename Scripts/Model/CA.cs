@@ -6,8 +6,8 @@ namespace GameOfLife.Scripts.Model
         private IRuleset _rules;
         public Cell[,] Cells;
 
-        public int Columns; // x
-        public int Rows; // y
+        public readonly int Columns; // x
+        public readonly int Rows; // y
         
         public CA(Cell[,] cells, IRuleset rules)
         {
