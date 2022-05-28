@@ -1,0 +1,14 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1236b702_002D7591_002D4a06_002D89f7_002Ddbc91b8ab7ed/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="StayDead" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::83763BFC-9CEF-4239-B48E-5F16A449A1E9::.NETFramework,Version=v4.7.2::ModelTest.SimpleRulesetTests.StayDead&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7b1893f0_002D278f_002D4278_002Db856_002D30fe8c3b90d3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="StayDead #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::83763BFC-9CEF-4239-B48E-5F16A449A1E9::.NETFramework,Version=v4.7.2::ModelTest.SimpleRulesetTests.StayDead&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b5baccb6_002De035_002D4aba_002Da139_002Dbdb1d58147a4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;ModelTest&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/run/media/gazinaft/d/gamedev/GameOfLife/ModelTest" Presentation="&amp;lt;ModelTest&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

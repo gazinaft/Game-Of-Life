@@ -4,8 +4,11 @@
 .mono
 .idea
 addons
+packages
+
 
 # Binaries
 bin/
 build/
 lib/
+obj

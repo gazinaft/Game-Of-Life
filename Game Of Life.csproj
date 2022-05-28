@@ -3,4 +3,10 @@
     <TargetFramework>net472</TargetFramework>
     <RootNamespace>GameOfLife</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="ModelTest\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="ModelTest\**" />
+  </ItemGroup>
 </Project>

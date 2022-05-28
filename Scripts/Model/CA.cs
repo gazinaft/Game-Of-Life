@@ -4,12 +4,12 @@ namespace GameOfLife.Scripts.Model
     {
         public int Generation { get; private set; }
         private IRuleset _rules;
-        public Cell[,] Cells;
+        public int[,] Cells;
 
         public readonly int Columns; // x
         public readonly int Rows; // y
         
-        public CA(Cell[,] cells, IRuleset rules)
+        public CA(int[,] cells, IRuleset rules)
         {
             Cells = cells;
             Generation = 0;
@@ -21,7 +21,7 @@ namespace GameOfLife.Scripts.Model
 
         public void NextStep()
         {
-            _rules.Eval(this);
+            _rules.Eval(ref Cells);
             Generation++;
         }
 
@@ -29,7 +29,7 @@ namespace GameOfLife.Scripts.Model
         {
             for (int i = 0; i < n; ++i)
             {
-                _rules.Eval(this);
+                _rules.Eval(ref Cells);
             }
             Generation += n;
         }

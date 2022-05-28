@@ -2,6 +2,8 @@
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game Of Life", "Game Of Life.csproj", "{FBAB827B-82CB-4759-9F02-94BDC42A29D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTest", "ModelTest\ModelTest.csproj", "{BD87F8B8-8E50-4069-AEAB-2C8440C88491}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 	Debug|Any CPU = Debug|Any CPU
@@ -15,5 +17,11 @@ Global
 		{FBAB827B-82CB-4759-9F02-94BDC42A29D8}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
 		{FBAB827B-82CB-4759-9F02-94BDC42A29D8}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
 		{FBAB827B-82CB-4759-9F02-94BDC42A29D8}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{BD87F8B8-8E50-4069-AEAB-2C8440C88491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD87F8B8-8E50-4069-AEAB-2C8440C88491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD87F8B8-8E50-4069-AEAB-2C8440C88491}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD87F8B8-8E50-4069-AEAB-2C8440C88491}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{BD87F8B8-8E50-4069-AEAB-2C8440C88491}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD87F8B8-8E50-4069-AEAB-2C8440C88491}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
