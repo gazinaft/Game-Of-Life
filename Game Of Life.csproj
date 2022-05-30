@@ -5,8 +5,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="ModelTest\**" />
+    <Compile Remove="Benchmark\**" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="ModelTest\**" />
+    <EmbeddedResource Remove="Benchmark\**" />
   </ItemGroup>
 </Project>

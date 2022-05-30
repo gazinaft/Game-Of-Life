@@ -22,6 +22,13 @@ public class GCell : Node2D
         _size = size;
         CellState = state;
     }
+
+    public GCell()
+    {
+        _size = new Vector2(10, 10);
+        CellState = 0;
+        Position += new Vector2(10, 10);
+    }
     
     public override void _Ready()
     {

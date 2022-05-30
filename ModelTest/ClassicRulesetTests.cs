@@ -5,17 +5,17 @@ using NUnit.Framework;
 namespace ModelTest
 {
     [TestFixture]
-    public class SimpleRulesetTests
+    public class ClassicRulesetTests
     {
 
-        private SimpleRuleset sr;
+        private SequentialRuleset sr;
         private int x;
         private int y;
         
         [SetUp]
         public void SetUp()
         {
-            sr = new SimpleRuleset();
+            sr = new SequentialRuleset();
             x = 1;
             y = 1;
         }
@@ -32,7 +32,7 @@ namespace ModelTest
                 { 0, 0, 0 },
                 { 0, 0, 0 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref dead0, x, y));
+            Assert.AreEqual(0, sr.EvalCell(dead0, x, y));
             
             // 1 neighbour
             var dead1 = new int[,]
@@ -41,7 +41,7 @@ namespace ModelTest
                 { 0, 0, 0 },
                 { 0, 0, 0 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref dead1, x, y));
+            Assert.AreEqual(0, sr.EvalCell(dead1, x, y));
 
             // 2 neighbours
             var dead2 = new int[,]
@@ -50,7 +50,7 @@ namespace ModelTest
                 { 1, 0, 0 },
                 { 0, 0, 0 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref dead2, x, y));
+            Assert.AreEqual(0, sr.EvalCell(dead2, x, y));
             
             // 4 neighbours
             var dead4 = new int[,]
@@ -59,7 +59,7 @@ namespace ModelTest
                 { 1, 0, 1 },
                 { 0, 1, 0 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref dead4, x, y));
+            Assert.AreEqual(0, sr.EvalCell(dead4, x, y));
 
             // 5 neighbour
             var dead5 = new int[,]
@@ -68,7 +68,7 @@ namespace ModelTest
                 { 0, 0, 1 },
                 { 0, 1, 1 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref dead5, x, y));
+            Assert.AreEqual(0, sr.EvalCell(dead5, x, y));
         }
 
         // Cell is born only with 3 neighbours
@@ -81,7 +81,7 @@ namespace ModelTest
                 { 0, 0, 0 },
                 { 1, 1, 1 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref birth1, x, y));
+            Assert.AreEqual(1, sr.EvalCell(birth1, x, y));
             
             var birth2 = new int[,]
             {
@@ -89,7 +89,7 @@ namespace ModelTest
                 { 0, 0, 0 },
                 { 1, 0, 1 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref birth2, x, y));
+            Assert.AreEqual(1, sr.EvalCell(birth2, x, y));
             
             var birth3 = new int[,]
             {
@@ -97,7 +97,7 @@ namespace ModelTest
                 { 0, 0, 1 },
                 { 0, 0, 1 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref birth3, x, y));
+            Assert.AreEqual(1, sr.EvalCell(birth3, x, y));
             
             var birth4 = new int[,]
             {
@@ -105,7 +105,7 @@ namespace ModelTest
                 { 1, 0, 0 },
                 { 0, 1, 0 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref birth4, x, y));
+            Assert.AreEqual(1, sr.EvalCell(birth4, x, y));
             
             var birth5 = new int[,]
             {
@@ -113,7 +113,7 @@ namespace ModelTest
                 { 0, 0, 0 },
                 { 0, 0, 1 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref birth5, x, y));
+            Assert.AreEqual(1, sr.EvalCell(birth5, x, y));
         }
 
         // 4 or more alive neighbours
@@ -127,7 +127,7 @@ namespace ModelTest
                 { 0, 1, 1 },
                 { 0, 0, 1 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref death4, x, y));
+            Assert.AreEqual(0, sr.EvalCell(death4, x, y));
             
             // 5
             var death5 = new int[,]
@@ -136,7 +136,7 @@ namespace ModelTest
                 { 0, 1, 1 },
                 { 1, 0, 1 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref death5, x, y));
+            Assert.AreEqual(0, sr.EvalCell(death5, x, y));
 
             // 6
             var death6 = new int[,]
@@ -145,7 +145,7 @@ namespace ModelTest
                 { 0, 1, 1 },
                 { 1, 0, 1 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref death6, x, y));
+            Assert.AreEqual(0, sr.EvalCell(death6, x, y));
 
             // 7
             var death7 = new int[,]
@@ -154,7 +154,7 @@ namespace ModelTest
                 { 1, 1, 1 },
                 { 1, 0, 1 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref death7, x, y));
+            Assert.AreEqual(0, sr.EvalCell(death7, x, y));
 
             // 8
             var death8 = new int[,]
@@ -163,7 +163,7 @@ namespace ModelTest
                 { 1, 1, 1 },
                 { 1, 1, 1 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref death8, x, y));
+            Assert.AreEqual(0, sr.EvalCell(death8, x, y));
         }
 
         // dies if 1 or less neighbours
@@ -177,7 +177,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 0, 0, 0 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref dead0, x, y));
+            Assert.AreEqual(0, sr.EvalCell(dead0, x, y));
             
             // 1 neighbour
             var dead1 = new int[,]
@@ -186,7 +186,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 0, 0, 0 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref dead1, x, y));
+            Assert.AreEqual(0, sr.EvalCell(dead1, x, y));
 
             var dead2 = new int[,]
             {
@@ -194,7 +194,7 @@ namespace ModelTest
                 { 0, 1, 1 },
                 { 0, 0, 0 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref dead2, x, y));
+            Assert.AreEqual(0, sr.EvalCell(dead2, x, y));
             
             var dead3 = new int[,]
             {
@@ -202,7 +202,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 1, 0, 0 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref dead3, x, y));
+            Assert.AreEqual(0, sr.EvalCell(dead3, x, y));
             
             var dead4 = new int[,]
             {
@@ -210,7 +210,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 0, 0, 0 }
             };
-            Assert.AreEqual(0, sr.EvalCell(ref dead4, x, y));
+            Assert.AreEqual(0, sr.EvalCell(dead4, x, y));
         }
 
         // Cell stays alive if it has 2 or 3 neighbours
@@ -223,7 +223,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 1, 1, 1 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref alive1, x, y));
+            Assert.AreEqual(1, sr.EvalCell(alive1, x, y));
             
             var alive2 = new int[,]
             {
@@ -231,7 +231,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 1, 0, 1 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref alive2, x, y));
+            Assert.AreEqual(1, sr.EvalCell(alive2, x, y));
             
             var alive3 = new int[,]
             {
@@ -239,7 +239,7 @@ namespace ModelTest
                 { 0, 1, 1 },
                 { 0, 0, 1 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref alive3, x, y));
+            Assert.AreEqual(1, sr.EvalCell(alive3, x, y));
             
             var alive4 = new int[,]
             {
@@ -247,7 +247,7 @@ namespace ModelTest
                 { 1, 1, 0 },
                 { 0, 1, 0 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref alive4, x, y));
+            Assert.AreEqual(1, sr.EvalCell(alive4, x, y));
             
             var alive5 = new int[,]
             {
@@ -255,7 +255,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 0, 0, 1 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref alive5, x, y));
+            Assert.AreEqual(1, sr.EvalCell(alive5, x, y));
             
             var alive6 = new int[,]
             {
@@ -263,7 +263,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 1, 0, 1 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref alive6, x, y));
+            Assert.AreEqual(1, sr.EvalCell(alive6, x, y));
             
             var alive7 = new int[,]
             {
@@ -271,7 +271,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 1, 0, 0 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref alive7, x, y));
+            Assert.AreEqual(1, sr.EvalCell(alive7, x, y));
             
             var alive8 = new int[,]
             {
@@ -279,7 +279,7 @@ namespace ModelTest
                 { 0, 1, 1 },
                 { 0, 0, 1 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref alive8, x, y));
+            Assert.AreEqual(1, sr.EvalCell(alive8, x, y));
             
             var alive9 = new int[,]
             {
@@ -287,7 +287,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 0, 1, 0 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref alive9, x, y));
+            Assert.AreEqual(1, sr.EvalCell(alive9, x, y));
             
             var alive10 = new int[,]
             {
@@ -295,7 +295,7 @@ namespace ModelTest
                 { 0, 1, 0 },
                 { 0, 0, 0 }
             };
-            Assert.AreEqual(1, sr.EvalCell(ref alive10, x, y));
+            Assert.AreEqual(1, sr.EvalCell(alive10, x, y));
         }
     }
 }

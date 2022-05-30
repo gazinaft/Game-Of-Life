@@ -1,16 +1,15 @@
 using Godot;
 using System;
+using GameOfLife.Scripts.Model;
 
 public class GBoard : Node2D
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
-
-    // Called when the node enters the scene tree for the first time.
+    private CA _ca;
+    private const int size = 0;
+    private IRuleset _rules;
     public override void _Ready()
     {
-        
+        _ca = new CA(new int[size,size]{}, new SequentialRuleset());
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
