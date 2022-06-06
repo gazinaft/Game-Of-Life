@@ -4,3 +4,7 @@
 
 [node name="GBoard" type="Node2D"]
 script = ExtResource( 1 )
+BoardX = 100
+BoardY = 100
+TileSize = 20
+TileGap = 2

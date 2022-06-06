@@ -2,5 +2,11 @@
 	
 	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b5baccb6_002De035_002D4aba_002Da139_002Dbdb1d58147a4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;ModelTest&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;Project Location="/run/media/gazinaft/d/gamedev/GameOfLife/ModelTest" Presentation="&amp;lt;ModelTest&amp;gt;" /&gt;
+  &lt;Or&gt;
+    &lt;Project Location="/run/media/gazinaft/d/gamedev/GameOfLife/ModelTest" Presentation="&amp;lt;ModelTest&amp;gt;" /&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::E2E9A7F6-EE32-4086-AC41-3C284C6E6DC7::.NETFramework,Version=v4.7.2::Benchmark.Program&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::E2E9A7F6-EE32-4086-AC41-3C284C6E6DC7::.NETFramework,Version=v4.7.2::Benchmark.BenchmarkProgram&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+  &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

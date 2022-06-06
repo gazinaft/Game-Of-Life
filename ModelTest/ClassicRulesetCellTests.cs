@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace ModelTest
 {
     [TestFixture]
-    public class ClassicRulesetTests
+    public class ClassicRulesetCellTests
     {
 
         private SequentialRuleset sr;

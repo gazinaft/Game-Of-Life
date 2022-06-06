@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace ModelTest
 {
     [TestFixture]
-    public class SequentialRulesetOnBoardTests
+    public class SequentialRulesetTests
     {
         private IRuleset rules;
         

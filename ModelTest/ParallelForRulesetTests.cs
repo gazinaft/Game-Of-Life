@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace ModelTest
 {
     [TestFixture]
-    public class ParallelRulesetOnBoardTests
+    public class ParallelForRulesetTests
     {
         private IRuleset rules;
         
